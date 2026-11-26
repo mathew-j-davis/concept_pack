@@ -1,0 +1,138 @@
+# Default Configuration for Table-Based Architecture Diagrams
+# Projects can override by creating their own diagram-config.yaml
+
+# Generic spacing (all dimensions in cm)
+layout:
+  item_spacing: 0.2    # Gap between adjacent boxes/columns
+  v_spacing: 0.2       # Vertical space between rows
+
+# Typography
+typography:
+  font_size: 20        # Font size in pixels (default: 18)
+  font_weight: 500     # Font weight
+  font_family: 'Arial, sans-serif'
+
+# Border/Stroke
+border:
+  stroke_width: 0      # Set to 0 to remove borders
+
+# Style Definitions
+#
+# Styles can be applied at multiple levels with cascading priority:
+#   cell > column > row > table > default
+#
+# Each style can define:
+#   - Colors: edge, fill, text (standard hex format with # prefix, e.g. '#FFFFFF')
+#   - Fonts: font_size (px), font_weight, font_family
+#
+# Usage examples:
+#   table:
+#     style: highlight          # Apply to entire table
+#     rows:
+#       - style: header         # Override for this row
+#         columns:
+#           - style: important  # Override for this column
+#             cell:
+#               label: "Data"
+#               style: special  # Override for this cell
+#
+# Or inline properties (highest priority):
+#   cell:
+#     label: "Important"
+#     edge: '#FF0000'
+#     fill: '#FFCCCC'
+#     text: '#FFFFFF'
+#     font_size: 24
+#     font_weight: 700
+#
+colors:
+  # Default style - darker blue with white text
+  box:
+    edge: '#2E5C8A'     # Darker blue (same as fill for no visible border)
+    fill: '#2E5C8A'     # Darker blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 18       # Slightly smaller for content
+
+  # Named styles
+  header:
+    edge: '#1F4A70'     # Very dark blue (same as fill)
+    fill: '#1F4A70'     # Very dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 20       # Larger for headers
+    font_weight: 700    # Bold
+
+  foundation:
+    edge: '#3D6B99'     # Medium dark blue (same as fill)
+    fill: '#3D6B99'     # Medium dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 16       # Smaller for foundation layers
+
+  cross_cutting:
+    edge: '#1F4A70'     # Very dark blue (same as fill)
+    fill: '#1F4A70'     # Very dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 18
+
+  # Additional example styles (projects can add more)
+  highlight:
+    edge: '#CC7000'     # Dark orange (same as fill)
+    fill: '#CC7000'     # Dark orange fill
+    text: '#FFFFFF'     # White text
+    font_size: 20
+    font_weight: 600
+
+  important:
+    edge: '#B02A37'     # Dark red (same as fill)
+    fill: '#B02A37'     # Dark red fill
+    text: '#FFFFFF'     # White text
+    font_size: 20
+    font_weight: 700
+
+  success:
+    edge: '#1E7E34'     # Dark green (same as fill)
+    fill: '#1E7E34'     # Dark green fill
+    text: '#FFFFFF'     # White text
+
+  # Background styles (for background nodes behind cells)
+  transparent_bg:
+    edge: '#E0E0E0'     # Light gray border
+    fill: '#FFFFFF'     # White fill
+    stroke_width: 1
+
+  # Azure to green gradient styles for tech rows
+  tech_azure:
+    edge: '#4A90D9'     # Azure blue
+    fill: '#4A90D9'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_teal:
+    edge: '#3D9999'     # Teal
+    fill: '#3D9999'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_mint:
+    edge: '#3DA37A'     # Mint green
+    fill: '#3DA37A'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_green:
+    edge: '#3DAD5B'     # Green
+    fill: '#3DAD5B'
+    text: '#FFFFFF'
+    font_size: 18
+
+  # Dark navy background for side columns
+  dark_navy_bg:
+    edge: '#1A2332'     # Dark navy
+    fill: '#1A2332'
+    stroke_width: 0
+
+  # Desaturated box style for cells on dark backgrounds
+  box_desaturated:
+    edge: '#4A6B8A'     # Desaturated blue
+    fill: '#4A6B8A'
+    text: '#FFFFFF'
+    font_size: 18

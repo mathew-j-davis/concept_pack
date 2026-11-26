@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# PowerPoint temp files
+~$*.pptx
+
+# Output files
+output/
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
